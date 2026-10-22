@@ -1,0 +1,55 @@
+{
+  "name": "@banyan/style-test-kit",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Offline style test toolkit for Banyan styles: Zotero RDF test data, Node sandbox runtime, HTML output and snapshots",
+  "license": "AGPL-3.0-or-later",
+  "author": "jiaojiaodubai",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jiaojiaodubai/banyan-style-test-kit.git"
+  },
+  "homepage": "https://github.com/jiaojiaodubai/banyan-style-test-kit#readme",
+  "bugs": {
+    "url": "https://github.com/jiaojiaodubai/banyan-style-test-kit/issues"
+  },
+  "keywords": [
+    "banyan",
+    "citation",
+    "csl",
+    "zotero",
+    "style",
+    "testing"
+  ],
+  "engines": {
+    "node": ">=22.18"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "node --import tsx ./node_modules/mocha/bin/mocha.js --timeout 30000 \"test/**/*.test.ts\"",
+    "cli": "node --import tsx src/cli.ts",
+    "fixtures": "node --import tsx scripts/gen-fixtures.ts",
+    "e2e": "node --import tsx src/cli.ts run --style fixtures/styles/gb-t-7714-2025-numeric.js --rdf fixtures/library-basic.rdf --contexts fixtures/contexts-basic.json --snapshot fixtures/snapshots/preset-numeric.json --check",
+    "e2e:update": "node --import tsx src/cli.ts run --style fixtures/styles/gb-t-7714-2025-numeric.js --rdf fixtures/library-basic.rdf --contexts fixtures/contexts-basic.json --snapshot fixtures/snapshots/preset-numeric.json --update",
+    "e2e:minimal": "node --import tsx src/cli.ts run --style fixtures/styles/numeric-minimal.js --rdf fixtures/library-basic.rdf --contexts fixtures/contexts-basic.json --snapshot fixtures/snapshots/minimal-basic.json --check",
+    "e2e:minimal:update": "node --import tsx src/cli.ts run --style fixtures/styles/numeric-minimal.js --rdf fixtures/library-basic.rdf --contexts fixtures/contexts-basic.json --snapshot fixtures/snapshots/minimal-basic.json --update",
+    "lint:check": "prettier --check .",
+    "lint:fix": "prettier --write ."
+  },
+  "dependencies": {
+    "@banyan/core": "github:jiaojiaodubai/banyan-core#a73bb5f4bb65dc00100520dac112fc027666391b",
+    "linkedom": "^0.18.12"
+  },
+  "devDependencies": {
+    "@types/chai": "^5.2.3",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "^24.19.0",
+    "chai": "^5.3.3",
+    "mocha": "^12.0.3",
+    "prettier": "^3.9.9",
+    "tsx": "^4.23.15",
+    "typescript": "^5.9.3"
+  },
+  "packageManager": "pnpm@10.24.0"
+}
