@@ -1,0 +1,8 @@
+# The test kit is a standalone distribution of the toolchain package. Map the
+# toolchain's internal package name to its release tarball so a fresh clone does
+# not need a sibling checkout; `toolchain.lock.json` pins the revision and
+# artifact hashes.
+packages: []
+
+overrides:
+  "@banyan/style-contract": "https://github.com/jiaojiaodubai/banyan-toolchain/releases/download/v0.1.0/banyan-style-contract-0.1.0.tgz"

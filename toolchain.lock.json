@@ -1,0 +1,28 @@
+{
+  "source": "https://github.com/jiaojiaodubai/banyan-toolchain",
+  "manifest": "https://github.com/jiaojiaodubai/banyan-toolchain/releases/download/v0.1.0/toolchain.manifest.json",
+  "toolchainRevision": "54c2618451e00efd806ec4cf6c7cf2c44196feb1",
+  "contractRevision": "c26d0884121a870107374936ccbc4e11222b015b18aa45d3bddb3165929d955d",
+  "schemaRevision": "zotero-45+csl-0ee62cac6648+cslm-e507b2fb131c",
+  "packages": {
+    "@banyan/core": "0.1.0",
+    "@banyan/style-contract": "0.1.0",
+    "eslint-plugin-banyan-style": "0.1.0",
+    "@banyan/style-test-kit": "0.1.0"
+  },
+  "artifacts": {
+    "contractArtifact": "banyan-style-contract-0.1.0.tgz",
+    "contractArtifactSha256": "efcc27119e0fb658acf39f34370913c6b0a535a6d306e4465837a550a22d3e76",
+    "coreArtifact": "banyan-core-0.1.0.tgz",
+    "coreArtifactSha256": "3792b76c541cf552a9c630da3f6ecce020628a24ba1dcdeb27da2dce0c7482ca",
+    "lintArtifact": "eslint-plugin-banyan-style-0.1.0.tgz",
+    "lintArtifactSha256": "042209b878221f3e1ef742d600bfd48362bd4a502f5343899b30ea60da60e6c6",
+    "testKitArtifact": "banyan-style-test-kit-0.1.0.tgz",
+    "testKitArtifactSha256": "89b27fd056df15f092c85df83293fdf183626fc1ccfe2e1cf3486939c858ec57",
+    "lintBundle": "eslint-plugin-banyan-style.mjs",
+    "lintBundleSha256": "2f8127215af342738550d0f4a2d38130c53a95ba179de6552d17a6a5cff2e6ad",
+    "lintMetadata": "eslint-plugin-banyan-style.build.json",
+    "lintMetadataSha256": "cd8e8be592a729f8799b15be7c2747bfb47efd7d69a808a33df803e7d4f688e2"
+  },
+  "note": "Standalone distribution of the toolchain's @banyan/style-test-kit at this revision. package.json installs the core and lint tarballs and maps the contract tarball through pnpm-workspace.yaml; this lock records the bytes those URLs resolve to."
+}
